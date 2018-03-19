@@ -3,14 +3,18 @@ import com.satownsend.beerinventory.model.BeerBottlesCount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class BeerBottlesCountDao {
 
     @Autowired
-    private OldBeerBottlesCountRepository repo;
+    private BeerBottlesCountRepository repo;
 
     public BeerBottlesCount findById(Long id) {
-        return repo.findById(id);
+//        Optional<BeerBottlesCount> op = repo.findById(id);
+//        return op.get();
+        return repo.findById(id).get();
     }
 
     public BeerBottlesCount save(BeerBottlesCount a) {
