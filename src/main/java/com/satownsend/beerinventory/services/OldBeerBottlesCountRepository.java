@@ -28,4 +28,3 @@ public class OldBeerBottlesCountRepository {
     }
 
 }
-//    create 2 methods findById    take a long id    return repo.findById(Id)
